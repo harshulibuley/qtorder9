@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.4.2.css">
+<script src="jquery.mobile.custom.js"></script>
+<script src="jquery.mobile.custom.min.js"></script>
+<link rel="stylesheet" href="jquery.mobile.custom.structure.css" />
+<link rel="stylesheet" href="jquery.mobile.custom.structure.min.css" />
+ <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.css" />
+  
+<link rel="stylesheet" href="jquery.mobile.custom.theme.css" />
+<link rel="stylesheet" href="jquery.mobile.custom.theme.min.css" />
+<link rel="stylesheet" href="jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+ <script src="https://rawgithub.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
+    <script id="mobile-datepicker" src="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
+    <script>
+ function delete_user() {	
+        $.ajax({
+			
+            url: "http://localhost:81/qt_webservice/delete_item.php",
+            type: "POST",
+            dataType: "text",
+            data: {
+               
+                
+            },
+			
+            success: function(data) {
+			alert(data);
+                parsed_data = $.parseJSON(data);
+                if (data) {
+                    alert("User was created");
+                    window.location = parsed_data.link;
+                }
+                else {
+                    alert("Error");
+                }
+
+            }
+      
+    });
+}
+</script>
+<!-- Latest compiled and minified CSS -->
+
+<!-- Latest compiled and minified JavaScript -->
+<style type="text/css">
+body {
+    background:url(images/back.png);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+.header{ background-color:#127BCC;}
+.ui-btn ui-btn-inline{ background-color:#127BCC;
+color:#ffffff;}
+.ui-first-child{ background-color:#127BCC;}
+.order_no { color:#ffffff;}
+</style>
+<title>QT-Order</title>
+</head>
+
+<body>
+<div data-role="page">
+
+
+<div data-role="header" style="background-color:#127BCC;">
+<a href="create_order.html" data-icon="back" data-theme="c" style="background-color:#08B1ED;" >Back</a>
+<h1 style="color:#ffffff;">Order List</h1>
+<a href="create_order.html" data-icon="plus" style="background-color:#08B1ED;"  >Add</a>
+
+
+</div>
+
+ <div data-role="main" class="ui-content">
+ <div>
+ <ul data-role="listview" id="myId" > 
+ <li><a href="#"> <table><tr><td width="50%" style=color:"#ffffff">12121
+ </td><td><h4 style="color:#F00;">5/2/2013 </h4>
+ <p>Recived</p>
+  </td>
+  <td><h4 style="color:#F00;">07:08PM </h4>
+ <p>4</p></td>
+  </tr>
+  </table>
+  </a>
+  </li>
+  <li><a href="#"> <table><tr><td width="50%" style=color:"#ffffff">12121
+ </td><td><h4 style="color:#F00;">5/2/2013 </h4>
+ <p>Recived</p>
+  </td>
+  <td><h4 style="color:#F00;">07:08PM </h4>
+ <p>4</p></td>
+  </tr>
+  </table>
+  </a>
+  </li>
+   <li><a href="#"> <table><tr><td width="50%" style=color:"#ffffff">12121
+ </td><td><h4 style="color:#F00;">5/2/2013 </h4>
+ <p>Recived</p>
+  </td>
+  <td><h4 style="color:#F00;">07:08PM </h4>
+ <p>4</p></td>
+  </tr>
+  </table>
+  </a>
+  </li>
+</ul>
+</div>
+ <div>
+
+</div>
+</body>
+
+</html>
